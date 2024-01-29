@@ -20,9 +20,22 @@ public class HomeServlet extends HttpServlet {
 
         PrintWriter out = resp.getWriter();
         out.println("<html>");
-        out.println("<head><title>Hello Servlet</title></head>");
+
+        out.println("<head>");
+        out.println("<link rel='stylesheet' href='http://localhost:9090/css/style.css'>");
+        out.println("</head>");
+
         out.println("<body>");
-        out.println("<h2>Hello from Java Servlet!</h2>");
+        out.println(" <header>" +
+                "    <h1 id=\"headertext\">Home</h1>\n" +
+                "    </header>" +
+                "    <nav id=\"nav\">" +
+                "        <a href=\"http://localhost:9090\" class=\"current\" title=\"Start\">Start</a>" +
+                "        <a href=\"http://localhost:9090/home\" title=\"home\" >Home</a>" +
+                "        <a href=\"http://localhost:9090/students\" title=\"students\">Students</a>" +
+                "        <a href=\"http://localhost:9090/courses\" title=\"courses\">Courses</a>" +
+                "        <a href=\"http://localhost:9090/attendance\" title=\"attendance\">Attendance</a>" +
+                "    </nav>");
         out.println("</body>");
         out.println("</html>");
         System.out.println("GET Request");
@@ -33,11 +46,9 @@ public class HomeServlet extends HttpServlet {
     public void connect() {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-//PORT and DbName should be changed
 
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Grit", "root", "");
             Statement stmt = con.createStatement();
-//TABLENAME should be changed
 
             ResultSet rs = stmt.executeQuery("SELECT * FROM students");
             while (rs.next()) {

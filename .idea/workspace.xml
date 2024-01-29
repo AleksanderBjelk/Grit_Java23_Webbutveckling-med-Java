@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7bdc4512-8984-42ae-a4de-b94aac644c81" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/project1/src/main/java/servlets/AttendanceServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project1/src/main/java/servlets/CoursesServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project1/src/main/java/servlets/StudentsServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project1/src/main/java/servlets/AttendanceServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/project1/src/main/java/servlets/AttendanceServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project1/src/main/java/servlets/CoursesServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/project1/src/main/java/servlets/CoursesServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project1/src/main/java/servlets/HomeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/project1/src/main/java/servlets/HomeServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project1/src/main/java/servlets/StatisticsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/project1/src/main/java/servlets/StatisticsServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project1/src/main/java/servlets/StudentsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/project1/src/main/java/servlets/StudentsServlet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

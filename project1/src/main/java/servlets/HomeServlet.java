@@ -22,7 +22,7 @@ public class HomeServlet extends HttpServlet {
         out.println("<html>");
 
         out.println("<head>");
-        out.println("<link rel='stylesheet' href='http://localhost:9090/css/style.css'>");
+        out.println("<link rel='stylesheet' href='css/style.css'>");
         out.println("</head>");
 
         out.println("<body>");
@@ -39,7 +39,6 @@ public class HomeServlet extends HttpServlet {
         out.println("</body>");
         out.println("</html>");
         System.out.println("GET Request");
-        System.out.println(req.getParameter("name"));
         connect();
     }
 

@@ -22,7 +22,7 @@ public class StudentsServlet extends HttpServlet {
         out.println("<html>");
 
         out.println("<head>");
-        out.println("<link rel='stylesheet' href='http://localhost:9090/css/style.css'>");
+        out.println("<link rel='stylesheet' href='css/style.css'>");
         out.println("</head>");
 
         out.println("<body>");

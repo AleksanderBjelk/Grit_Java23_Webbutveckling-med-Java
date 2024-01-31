@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>MyGrit</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <h1 id="headertext">Post Students</h1>
+</header>
+
+<nav id="nav">
+    <a href="http://localhost:9090" class="current" title="Start">Start</a>
+    <a href="http://localhost:9090/home" title="Home" >Home</a>
+    <a href="http://localhost:9090/students" title="Students">Students</a>
+    <a href="http://localhost:9090/courses" title="Courses">Courses</a>
+    <a href="http://localhost:9090/attendance" title="Attendance">Attendance</a>
+    <a href="http://localhost:9090/poststudents" title="PostStudents">Post Students</a>
+    <a href="http://localhost:9090/postcourses" title="PostCourses">Post Courses</a>
+    <a href="http://localhost:9090/checkstudentcourses" title="CheckStudentCourses">Check Classes</a>
+</nav>
+
+<form action="/poststudents" method="POST">
+    Förnamn: <input type="text" id="fname" name="fname"><br>
+    Efternamn: <input type="text" id="lname" name="lname"><br>
+    Stad: <input type="text" id="town" name="town"><br>
+    Hobby: <input type="text" id="hobby" name="hobby"><br><br>
+    <input type="submit" value="Lägg till student">
+</form>
+
+</body>
+</html>

@@ -35,12 +35,9 @@ public class AttendanceServlet extends HttpServlet {
                 "        <a href=\"http://localhost:9090/students\" title=\"students\">Students</a>" +
                 "        <a href=\"http://localhost:9090/courses\" title=\"courses\">Courses</a>" +
                 "        <a href=\"http://localhost:9090/attendance\" title=\"attendance\">Attendance</a>" +
-                "        <a href=\"http://localhost:9090/poststudents\" title=\"PostStudents\">Post Students</a>" +
-                "        <a href=\"http://localhost:9090/postcourses\" title=\"PostCourses\">Post Courses</a>" +
-                "        <a href=\"http://localhost:9090/checkstudentcourses\" title=\"CheckStudentCourses\">Check Classes</a>" +
                 "    </nav>");
-        String attendanceTable = getAttendanceTable();
-        out.println(attendanceTable);
+        String attendancdeTable = getAttendanceTable();
+        out.println(attendancdeTable);
 
         out.println("</body>");
         out.println("</html>");
@@ -56,14 +53,14 @@ public class AttendanceServlet extends HttpServlet {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Grit", "root", "");
-            Statement statement = con.createStatement();
+            Statement stmt = con.createStatement();
 
             String query = "SELECT attendance.id, students.Fname, students.Lname, courses.name " +
                     "FROM attendance " +
                     "JOIN students ON attendance.`student.id` = students.id " +
                     "JOIN courses ON attendance.`course.id` = courses.id";
 
-            ResultSet rs = statement.executeQuery(query);
+            ResultSet rs = stmt.executeQuery(query);
             while (rs.next()) {
                 table.append("<tr>");
 

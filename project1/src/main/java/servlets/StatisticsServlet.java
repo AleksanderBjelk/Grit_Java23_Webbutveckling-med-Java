@@ -34,9 +34,9 @@ public class StatisticsServlet extends HttpServlet {
             Class.forName("com.mysql.cj.jdbc.Driver");
 
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Grit", "root", "");
-            Statement statement = con.createStatement();
+            Statement stmt = con.createStatement();
 
-            ResultSet rs = statement.executeQuery("SELECT * FROM students");
+            ResultSet rs = stmt.executeQuery("SELECT * FROM students");
             while (rs.next()) {
                 System.out.println(rs.getInt(1) + " " + rs.getString(2));
             }

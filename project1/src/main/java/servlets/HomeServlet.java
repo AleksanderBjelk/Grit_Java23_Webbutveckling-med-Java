@@ -35,9 +35,6 @@ public class HomeServlet extends HttpServlet {
                 "        <a href=\"http://localhost:9090/students\" title=\"students\">Students</a>" +
                 "        <a href=\"http://localhost:9090/courses\" title=\"courses\">Courses</a>" +
                 "        <a href=\"http://localhost:9090/attendance\" title=\"attendance\">Attendance</a>" +
-                "        <a href=\"http://localhost:9090/poststudents\" title=\"PostStudents\">Post Students</a>" +
-                "        <a href=\"http://localhost:9090/postcourses\" title=\"PostCourses\">Post Courses</a>" +
-                "        <a href=\"http://localhost:9090/checkstudentcourses\" title=\"CheckStudentCourses\">Check Classes</a>" +
                 "    </nav>");
         out.println("</body>");
         out.println("</html>");
@@ -50,9 +47,9 @@ public class HomeServlet extends HttpServlet {
             Class.forName("com.mysql.cj.jdbc.Driver");
 
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Grit", "root", "");
-            Statement statement = con.createStatement();
+            Statement stmt = con.createStatement();
 
-            ResultSet rs = statement.executeQuery("SELECT * FROM students");
+            ResultSet rs = stmt.executeQuery("SELECT * FROM students");
             while (rs.next()) {
                 System.out.println(rs.getInt(1) + " " + rs.getString(2));
             }

@@ -57,7 +57,7 @@ public class StudentsServlet extends HttpServlet {
         try {
 
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Grit", "root", "");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Grit", "root", ""); //för endast SELECT frågor namn: Aleksander lösenord: password
             Statement stmt = con.createStatement();
 
             ResultSet rs = stmt.executeQuery("SELECT * FROM students");

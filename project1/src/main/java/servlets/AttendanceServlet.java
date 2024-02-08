@@ -52,11 +52,10 @@ public class AttendanceServlet extends HttpServlet {
                 "</tr>");
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Grit", "root", "");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Grit", "root", ""); //för endast SELECT frågor namn: Aleksander lösenord: password
             Statement stmt = con.createStatement();
 
-            String query = "SELECT attendance.id, students.Fname, students.Lname, courses.name " +
-                    "FROM attendance " +
+            String query = "SELECT attendance.id, students.Fname, students.Lname, courses.name FROM attendance " +
                     "JOIN students ON attendance.`student.id` = students.id " +
                     "JOIN courses ON attendance.`course.id` = courses.id";
 

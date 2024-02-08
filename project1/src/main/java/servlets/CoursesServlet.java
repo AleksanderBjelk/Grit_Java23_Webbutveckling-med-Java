@@ -48,14 +48,12 @@ public class CoursesServlet extends HttpServlet {
     public String getCoursesTable() {
 
         StringBuilder table = new StringBuilder("<table>");
-        table.append("<tr><th>ID</th>" +
-                "<th>Course name</th>" +
-                "<th>YHP</th>" +
+        table.append("<tr><th>ID</th><th>Course name</th><th>YHP</th>" +
                 "<th>Description</th>");
         try {
 
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Grit", "root", "");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Grit", "root", ""); //för endast SELECT frågor namn: Aleksander lösenord: password
             Statement stmt = con.createStatement();
 
             ResultSet rs = stmt.executeQuery("SELECT * FROM courses");

@@ -31,7 +31,6 @@ public class CoursesServlet extends HttpServlet {
                 "    </header>" +
                 "    <nav id=\"nav\">" +
                 "        <a href=\"http://localhost:9090/index.html\" class=\"current\" title=\"Start\">Start</a>" +
-                //"        <a href=\"http://localhost:9090/home\" title=\"home\" >Home</a>" +
                 "        <a href=\"http://localhost:9090/students\" title=\"students\">Students</a>" +
                 "        <a href=\"http://localhost:9090/courses\" title=\"courses\">Courses</a>" +
                 "        <a href=\"http://localhost:9090/attendance\" title=\"attendance\">Attendance</a>" +

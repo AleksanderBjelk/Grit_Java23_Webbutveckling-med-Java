@@ -31,7 +31,7 @@ public class AttendanceServlet extends HttpServlet {
                 "    </header>" +
                 "    <nav id=\"nav\">" +
                 "        <a href=\"http://localhost:9090/index.html\" class=\"current\" title=\"Start\">Start</a>" +
-                "        <a href=\"http://localhost:9090/home\" title=\"home\" >Home</a>" +
+                //"        <a href=\"http://localhost:9090/home\" title=\"home\" >Home</a>" +
                 "        <a href=\"http://localhost:9090/students\" title=\"students\">Students</a>" +
                 "        <a href=\"http://localhost:9090/courses\" title=\"courses\">Courses</a>" +
                 "        <a href=\"http://localhost:9090/attendance\" title=\"attendance\">Attendance</a>" +
@@ -52,7 +52,7 @@ public class AttendanceServlet extends HttpServlet {
                 "</tr>");
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Grit", "root", ""); //för endast SELECT frågor namn: Aleksander lösenord: password
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Grit", "Aleksander", "password"); //för endast SELECT frågor namn: Aleksander lösenord: password
             Statement stmt = con.createStatement();
 
             String query = "SELECT attendance.id, students.Fname, students.Lname, courses.name FROM attendance " +
